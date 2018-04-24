@@ -3,3 +3,4 @@
 /*.iws
 /target
 **/*.rs.bk
+/Cargo.lock
