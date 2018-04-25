@@ -1,6 +1,6 @@
 use std::mem;
 
-fn main() {
+fn datatypes() {
   // Unsigned 8-bit integer binding set to 12, binding defaults to immutable
   let a: u8 = 12;
   // Signed 8-bit integer binding set to -1, binding defaults to immutable
@@ -50,5 +50,8 @@ fn main() {
   bool (1 byte)
   char (4 bytes)
   */
+}
 
+fn main() {
+  datatypes();
 }
