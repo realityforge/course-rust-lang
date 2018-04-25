@@ -37,7 +37,7 @@ fn datatypes() {
 
   // Inferred to double precision or f64
   let h = true;
-  println!("Boolean: h = {}, size is {} bytes", g, mem::size_of_val(&g));
+  println!("Boolean: h = {}, size is {} bytes", h, mem::size_of_val(&h));
 
   /*
   Types:
