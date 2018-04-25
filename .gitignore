@@ -3,4 +3,5 @@
 /*.iws
 /target
 **/*.rs.bk
+/Gemfile.lock
 /Cargo.lock
