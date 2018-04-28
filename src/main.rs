@@ -52,6 +52,26 @@ fn datatypes() {
   */
 }
 
+// Const variables are inlined in code that uses them.
+// When declaring them we MUST declare type
+const ANSWER_TO_LIFE: u8 = 42;
+
+static mut OTHER_VALUE: u8 = 2;
+
+fn globals() -> () {
+  println!("ANSWER_TO_LIFE= {}, size is {} bytes", ANSWER_TO_LIFE, mem::size_of_val(&ANSWER_TO_LIFE));
+// To read or write static mutable state you need to tell rust you know what you are doing.
+// This is by using an `unsafe` block or function
+  unsafe
+    {
+      println!("1. OTHER_VALUE={}", OTHER_VALUE);
+      OTHER_VALUE = 3;
+      println!("2. OTHER_VALUE={}", OTHER_VALUE);
+    }
+}
+
 fn main() {
   datatypes();
+
+  globals()
 }
